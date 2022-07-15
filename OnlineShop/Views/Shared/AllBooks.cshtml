@@ -1,0 +1,13 @@
+﻿@*We connect a specific class*@
+@model Book
+
+<div class="col-lg-3">
+    <img class="img-thumbnail imager" src="@Model.img" alt="@Model.Name"/>
+    <p>@Model.Name</p>
+    <p>@Model.shortDesc</p>
+    <p>@Model.price.ToString()$</p>
+    @*Specify in asp-route-cartId the product id of which we are passing*@
+    <p><a class="btn btn-warning" asp-controller="ShopCart" asp-action="addToCart"
+           asp-route-Id="@Model.Id">Add to Basket</a>
+    </p>
+</div>

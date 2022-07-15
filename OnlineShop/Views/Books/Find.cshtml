@@ -1,0 +1,27 @@
+﻿@using DataLayer.Model
+
+<h1>Find</h1>
+
+
+<div>
+    @{
+        foreach (Book item in Model)
+        {
+            <img width="300" height="450" src="@Url.Content(item.img)" alt="" />
+
+            <br>
+            @item.Name
+
+            <br>
+            @item.shortDesc
+
+            <br>
+            @item.grade
+
+            <br>
+            @item.price
+
+            <br>
+        }
+    }
+</div>

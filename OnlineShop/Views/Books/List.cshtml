@@ -1,0 +1,14 @@
+﻿@using DataLayer.Model
+<h1>Available books</h1>
+<h3>@Model.CurrectCategory</h3>
+
+<div class="row mt-5 mb-2">
+
+    @{
+        foreach (Book book in Model.AllBooks)
+        {
+            @Html.Partial("AllBooks", book);
+        }
+    }
+</div>
+

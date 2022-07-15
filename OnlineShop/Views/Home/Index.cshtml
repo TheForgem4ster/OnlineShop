@@ -1,0 +1,18 @@
+﻿@model HomeViewModel
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <h1>Best book</h1>
+
+    <div class="row mt-5 mb-3">
+
+        @{
+            foreach (Book book in Model.favBook)
+            {
+                @Html.Partial("AllBooks", book);
+            }
+        }
+    </div>
+</div>
+
+

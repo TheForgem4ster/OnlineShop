@@ -1,0 +1,66 @@
+﻿@model Order
+
+<h3>Making an order</h3>
+
+	
+	<form asp-action="Checkout" method="post" class="form-horizontal">
+		@*Field 1*@
+		<div class="form-group mb-3">
+			@*The output of the inscription near the field*@
+			<label asp-for="Name" class="form-label display-6"></label>
+			<div class="col-md-5">
+				@*Field output*@
+				<input asp-for="Name" class="form-control" />
+				@*Error text*@
+				<span asp-validation-for="Name" class="text-danger"></span>
+			</div>
+		</div>
+		@*Field 2*@
+		<div class="form-group mb-3">
+			@*The output of the inscription near the field*@
+			<label asp-for="SurName" class="form-label display-6"></label>
+			<div class="col-md-5">
+				@*Field output*@
+				<input asp-for="SurName" class="form-control" />
+				@*Error text*@
+				<span asp-validation-for="SurName" class="text-danger"></span>
+			</div>
+		</div>
+
+		@*Field 3*@
+		<div class="form-group mb-3">
+			@*The output of the inscription near the field*@
+			<label asp-for="Adress" class="form-label display-6"></label>
+			<div class="col-md-5">
+				@*Field output*@
+				<input asp-for="Adress" class="form-control" />
+				@*Error text*@
+				<span asp-validation-for="Adress" class="text-danger"></span>
+			</div>
+		</div>
+		@*Field 4*@
+		<div class="form-group mb-3">
+			@*The output of the inscription near the field*@
+			<label asp-for="Phone" class="form-label display-6"></label>
+			<div class="col-md-5">
+				@*Field output*@
+				<input asp-for="Phone" class="form-control" />
+				@*Error text*@
+				<span asp-validation-for="Phone" class="text-danger"></span>
+			</div>
+		</div>
+
+		@*Field 5*@
+		<div class="form-group mb-3">
+			@*The output of the inscription near the field*@
+			<label asp-for="Email" class="form-label display-6"></label>
+			<div class="col-md-5">
+				@*Field output*@
+				<input asp-for="Email" class="form-control" />
+				@*Error text*@
+				<span asp-validation-for="Email" class="text-danger"></span>
+			</div>
+		</div>
+		<input class="btn btn-success" type="submit" value="Complete order" />
+	</form>
+

@@ -1,0 +1,30 @@
+﻿@model DataLayer.Model.RegisterModel
+
+<center>
+    <h1>Registration</h1>
+</center>
+
+<form asp-action="Register" asp-controller="Account" asp-anti-forgery="true">
+    <div class="validation" asp-validation-summary="ModelOnly"></div>
+    <div class="mb-3">
+        <div class="mb-3">
+            <label asp-for="Email" class="form-label display-6">Введите Email</label><br />
+            <input type="text" asp-for="Email" class="form-control" aria-describedby="emailHelp" />
+            <span asp-validation-for="Email" />
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3 form-group display-6">
+            <label asp-for="Password" class="form-label">Еnter password</label><br />
+            <input asp-for="Password" type="password" class="form-control" />
+            <span asp-validation-for="Password" />
+        </div>
+        <div class="mb-3 form-group display-6">
+            <label asp-for="ConfirmPassword" class="form-label">Repeat password</label><br />
+            <input asp-for="ConfirmPassword" type="password" class="form-control" />
+            <span asp-validation-for="ConfirmPassword" />
+        </div>
+        <div>
+            <br><button type="submit" class="btn btn-primary">Registration</button>
+        </div>
+    </div>
+</form>
